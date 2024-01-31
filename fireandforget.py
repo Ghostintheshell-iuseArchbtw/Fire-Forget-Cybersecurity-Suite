@@ -55,9 +55,9 @@ class GobusterRustscanNiktoSQLMapGUI:
         central_terminal_command = (
             f"xterm -geometry {central_terminal_width}x{central_terminal_height}+{central_terminal_x}+{central_terminal_y} "
             f"-hold -e 'echo -e "
-            f"\"\n\nWelcome to the Fire&Forget Cybersecurity Suite!\n\nLaunching powerful tools for penetration testing...\n"
-            f"This central terminal controls and entertains you while you wait.\n\nFIRE AND FORGET ENGAGED!\nLOADING TOOLS, SETTING TARGET,\n"
-            f"AIMING TOOLS, FIRING!\"\n; for i in $(seq 5 -1 1); do echo \"Starting in \$i seconds...\"; sleep 1; done; bash'"
+            f"\"\\n\\nWelcome to the Fire&Forget Cybersecurity Suite!\\n\\nInitiating Full-Scale Cyber Assault...\\n"
+            f"This central terminal orchestrates the chaos while you stand at the edge.\\n\\nFIRE AND FORGET ENGAGED!\\n"
+            f"Locating target, locking coordinates, loading arsenal, UNLEASHING HELL!\"; for i in $(seq 5 -1 1); do echo \"Launching in \$i seconds...\"; sleep 1; done; echo UNLEASHING HELL; bash'"
         )
         subprocess.Popen(central_terminal_command, shell=True)
 
