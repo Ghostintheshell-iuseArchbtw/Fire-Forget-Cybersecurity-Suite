@@ -75,7 +75,7 @@ class GobusterRustscanNiktoSQLMapGUI:
         # Run Gobuster in dir mode
         target_url = self.url_input.text()
         gobuster_command = (
-            f"xterm -geometry 80x24+0+0 -hold -e 'sudo gobuster dir -u {target_url}:80/ -w /usr/share/seclists/Discovery/Web-Content/dirsearch.txt --no-error; bash'"
+            f"xterm -geometry 80x24+0+0 -hold -e 'gobuster dir -u {target_url}:80/ -w /usr/share/seclists/Discovery/Web-Content/dirsearch.txt --no-error; bash'"
         )
         subprocess.Popen(gobuster_command, shell=True)
 
