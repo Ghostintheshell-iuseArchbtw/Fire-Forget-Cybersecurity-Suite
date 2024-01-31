@@ -82,7 +82,7 @@ class GobusterRustscanNiktoSQLMapGUI:
         # Run Rustscan to find potential web servers
         rustscan_command = (
          f"xterm -geometry 80x24+0-0 -hold -e 'rustscan -a {target_url} -t 500 -b 2000 -u 6000 -- -sV -o rustscan_output.txt; bash'"  
-#	 f"xterm -geometry 80x24+0-0 -hold -e 'rustscan -a {target_url} -t 500 -b 2000 -u 6000 -- -sV --script vuln -o rustscan_output.txt; bash'"
+#        f"xterm -geometry 80x24+0-0 -hold -e 'rustscan -a {target_url} -t 500 -b 2000 -u 6000 -- -sV --script vuln -o rustscan_output.txt; bash'"
         )
         subprocess.Popen(rustscan_command, shell=True)
 
@@ -101,7 +101,7 @@ class GobusterRustscanNiktoSQLMapGUI:
         if web_server_ports:
             # If potential web servers found, run SQLMap on each
             for port in web_server_ports:
-                sqlmap_command = f"xterm -geometry 80x24-0+0 -hold -e 'sqlmap -u http://{target_url}:{port} --dbs; bash'"
+                sqlmap_command = f"xterm -geometry 80x24-0+0 -hold -e 'sqlmap -u http://{target_url}:{port} --forms --crawl=8 --dbs; bash'"
                 subprocess.Popen(sqlmap_command, shell=True)
 
     def flee(self):
