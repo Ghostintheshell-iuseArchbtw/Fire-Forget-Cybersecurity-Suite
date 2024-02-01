@@ -84,8 +84,5 @@ Security Considerations
 
     Added warnings and considerations regarding the use of sudo for Gobuster.
     Emphasized the responsible and ethical use of cybersecurity tools.
-
-Version Bump: v1.0.0
-
-    Official release of Fire&Forget Cybersecurity Suite v1.0.0.
-    Ready for public use and contributions.
+Todo
+    Improve UI,better error handling and logging,more tools and distro cross compatibility implmentation
